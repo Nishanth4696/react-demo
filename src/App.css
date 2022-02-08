@@ -11,3 +11,12 @@
   height: 100px;
   width: 100px;
 }
+.movie-container{
+  background-color: brown;
+}
+
+.movie-poster{
+  height: 550px;
+  width: 500px;
+  object-fit: cover;
+}

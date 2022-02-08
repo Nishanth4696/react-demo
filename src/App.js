@@ -32,9 +32,10 @@ function App() {
       {/* <Msg />
       <Msg />
       <Msg /> */}
+      <Movie />
       
 
-       {profile.map((nm) => <Msg name={nm.name} pic={nm.picture}/>)}
+       {/* {profile.map((nm) => <Msg name={nm.name} pic={nm.picture}/>)} */}
        
       
     </div>
@@ -58,6 +59,24 @@ function Msg({name, pic}){
     <img  className="profile-pic" src={pic} alt={name} />
    <h1> {name}!!!!😎</h1>
   </div>
+  );
+}
+
+
+function Movie(){
+  return (
+    <div className="movie-container">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXob6Q6DLH_AQob9tQ3TQXELP7VfO2P1Uy1Q&usqp=CAU" 
+        alt="The Avengers" 
+        className="movie-poster"/>
+      
+      <h3 className="movie-name">The Avengers</h3>
+      <p className="movie-rating">⭐8 </p>
+      <p className="">The Avengers are a fictional team of superheroes and the protagonists of the Marvel Cinematic Universe (MCU) media franchise, based on the Marvel Comics team of the same name created by Stan Lee and Jack Kirby in 1963</p> 
+      
+
+    </div>
   );
 }
 
