@@ -12,7 +12,7 @@ function App() {
     },
     {
       name:"Vijay",
-      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQ-YHX2i3RvTDDmpfnde4qyb2P8up7Wi3Ww&usqp=CAU"
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXUA8i_XkolHaG72wChky5ycJP1xBBQ4gPA&usqp=CAU"
     },
     {
       name:"Raj",
