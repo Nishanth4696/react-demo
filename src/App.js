@@ -3,20 +3,20 @@ import './App.css';
 function App() {
   const profile= [
     {
-      name:"kewal",
-      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyPBq-wpgBW4Wx9pZunhixV-QVnTcsJycO3A&usqp=CAU"
+      name:"Thor",
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd6TnOXptuSCI6lHxBgtoBNs4d4TZI6SC44w&usqp=CAU"
     },
     {
-      name:"Jack",
-      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQ-YHX2i3RvTDDmpfnde4qyb2P8up7Wi3Ww&usqp=CAU"
+      name:"Captain Marvel",
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKzdrJ6cmasekbTbZ5vFpa-JdF3QA9feGVAg&usqp=CAU"
     },
     {
-      name:"Vijay",
-      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXUA8i_XkolHaG72wChky5ycJP1xBBQ4gPA&usqp=CAU"
+      name:"Tony Stark",
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVL8gWjOJsouwIF1LbmUXbctLt8L4ngXYTg&usqp=CAU"
     },
     {
-      name:"Raj",
-      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&usqp=CAU"
+      name:"Captain America",
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS02Sz_woyndNHJlpAzoNzyUnkb2uWdXk_94g&usqp=CAU"
     }
   ]
   return (
@@ -48,7 +48,7 @@ function Msg({name, pic}){
   return(
   <div className="user-name">
     <img  className="profile-pic" src={pic} alt={name} />
-   <h1>Hello {name}!!!!😎</h1>
+   <h1> {name}!!!!😎</h1>
   </div>
   );
 }
