@@ -17,6 +17,10 @@ function App() {
     {
       name:"Captain America",
       picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS02Sz_woyndNHJlpAzoNzyUnkb2uWdXk_94g&usqp=CAU"
+    },
+    {
+      name:"SpiderMan",
+      picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBuRoLbHntRnJ73oN3GW7ABW22WEIbhcGzhA&usqp=CAU"
     }
   ]
   return (
