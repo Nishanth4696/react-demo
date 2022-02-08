@@ -7,7 +7,7 @@ function App() {
       picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyPBq-wpgBW4Wx9pZunhixV-QVnTcsJycO3A&usqp=CAU"
     },
     {
-      name:"Vinay",
+      name:"Jack",
       picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQ-YHX2i3RvTDDmpfnde4qyb2P8up7Wi3Ww&usqp=CAU"
     },
     {
