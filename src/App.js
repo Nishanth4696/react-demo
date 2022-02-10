@@ -1,5 +1,5 @@
 import './App.css';
-import { ColorBox } from './ColorBox';
+import { AddColor } from './ColorBox';
 
 import MovieList from './MovieList';
 
@@ -58,7 +58,7 @@ export default function App() {
   return (
     <div className="App">
         {/* <MovieList List_of_Movies={List_of_Movies}/>  */}
-        <ColorBox />
+        <AddColor />
     </div>
   );
 }
