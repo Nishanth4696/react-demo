@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function AddColor() {
+ export function ColorBox() {
  const [color, setColor] = useState("");
   const styles = { backgroundColor: color };
   // const colors=['teal', 'orange', 'lavender']
@@ -15,15 +15,16 @@ export function AddColor() {
           placeholder='Enter the Color'
        />
        <button onClick={() => setColors([...colors, color])}>AddColor</button>
-       {colors.map((clr) =>( <ColorBox color={clr} /> ))}
+       {colors.map((clr,index) =>( <AddColor key={index} color={clr} /> ))}
       
     </div>
   );
 }
 
-function ColorBox({color}){
+function AddColor({color}){
   const styles={backgroundColor:color , height:'25px', width:'200px',marginTop:'10px'}
   return(
     <div style={styles}></div>
   );
 }
+
