@@ -7,6 +7,7 @@ const styles = rating > 8 ? {color : 'teal', fontWeight: 'bold'} : {color : 'cri
 
 const summarystyles = { display :show ? 'block' : 'none'} 
     return (
+      
       <div className="movie-container">
         <img 
           src={poster} 
@@ -24,6 +25,7 @@ const summarystyles = { display :show ? 'block' : 'none'}
         
   
       </div>
+      
     );
   }
 

@@ -15,7 +15,7 @@
   background-color: white;
   min-width: 345px;
   width: 345px;
-  
+  border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
   margin: 20px;
@@ -51,12 +51,7 @@
   margin: 10px;
 }
 
-body{
-  margin: 20px;
-  background: linear-gradient(red, yellow) no-repeat;
-  height: 100%;
- 
-}
+
 
 .movieList{
   display: flex;
