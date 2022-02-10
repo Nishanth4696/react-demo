@@ -13,8 +13,8 @@
 }
 .movie-container{
   background-color: white;
-  min-width: 345px;
-  width: 345px;
+  min-width: 250px;
+  width: 250px;
   border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
@@ -25,8 +25,8 @@
 }
 
 .movie-poster{
-  height: 500px;
-  width: 345px;
+  height: 300px;
+  width: 250px;
   object-fit: cover;
 }
 
@@ -81,4 +81,23 @@
 
 .movie-show-button{
 font-size: 15px;
+}
+
+.add-movie{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 40px;
+  margin-top: 20px;
+  
+  
+}
+.add-color{
+  height: 30px;
+  width: 300px;
+  
+}
+.add-color-container{
+  margin: 20px;
+  
 }

@@ -1,8 +1,9 @@
 import './App.css';
 import { ColorBox } from './ColorBox';
-
-
 import MovieList from './MovieList';
+import { AddMovie } from './AddMovie';
+
+
 
 export default function App() {
   const List_of_Movies=[
@@ -58,6 +59,7 @@ export default function App() {
   ];
   return (
     <div className="App">
+         <AddMovie movies={List_of_Movies}/>
         <MovieList List_of_Movies={List_of_Movies}/> 
         {/* <ColorBox /> */}
        
