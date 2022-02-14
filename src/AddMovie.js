@@ -25,7 +25,7 @@ export function AddMovie({ Movies, setMovies }) {
   };
   return (
 
-    <div>
+    <div className='add-movie-form'>
       <TextField
         value={name}
         onChange={(event) => setName(event.target.value)}
