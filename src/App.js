@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { ColorBox } from './ColorBox';
 import MovieList from './MovieList';
 import { AddMovie } from './AddMovie';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 
 
 
@@ -61,61 +59,12 @@ export default function App() {
 
   ];
 
-  const [name, setName] = useState("");
-  const [rating, setRating] = useState("");
-  const [summary, setSummary] = useState("");
-  const [poster, setPoster] = useState("");
-
   const [movies, setMovies] = useState(List_of_Movies);
-  const addMovie = () => {
-  
-      const newMovie={
-        name,
-        rating: parseInt(rating),
-        summary,
-        poster,
-        
-      };
-      console.log(newMovie)
-  setMovies([ ...movies, newMovie]);
-  console.log(movies)
-};
   return (
     <div className="App">
-      <div>
-        <TextField           
-          value={name} 
-          onChange={(event) =>setName(event.target.value)} 
-          placeholder='Enter the name'
-          id="standard-basic"  
-          variant="standard" />
-     
-        <TextField           
-          value={rating} 
-          onChange={(event) =>setRating(event.target.value)} 
-          placeholder='Enter the rating'
-          id="standard-basic"  
-          variant="standard" />
-
-        <TextField            
-          value={summary} 
-          onChange={(event) =>setSummary(event.target.value)} 
-          placeholder='Enter the summary'
-          id="standard-basic"  
-          variant="standard" />
-
-        <TextField  
-          value={poster} 
-          onChange={(event) =>setPoster(event.target.value)} 
-          placeholder='Enter the poster'
-          id="standard-basic"  
-          variant="standard" />
-
-      <Button onClick={addMovie} variant="outlined">AddMovie</Button>
-
-    </div>
-         {/* <AddMovie List_of_Movies={List_of_Movies}/> */}
-        <MovieList List_of_Movies={List_of_Movies}/> 
+       
+        <AddMovie Movies={movies} setMovies={setMovies}/>
+        <MovieList Movies={movies}/> 
         {/* <ColorBox /> */}
        
     </div>
