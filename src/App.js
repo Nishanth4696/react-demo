@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { ColorBox } from './ColorBox';
+// import { ColorBox } from './ColorBox';
 import MovieList from './MovieList';
 import { AddMovie } from './AddMovie';
 
