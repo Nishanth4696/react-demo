@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  
 }
 
 .user-name{
@@ -13,8 +15,8 @@
 }
 .movie-container{
   background-color: white;
-  min-width: 290px;
-  width: 290px;
+  min-width: 320px;
+  width: 320px;
   border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
@@ -27,12 +29,15 @@
 .add-movie-form{
   display: flex;
   flex-direction: column;
+  
   margin: 30px;
 }
-
+.add-movie-input{
+  margin: 20px;
+}
 .movie-poster{
   height: 300px;
-  width: 290px;
+  width: 320px;
   object-fit: cover;
 }
 
@@ -110,4 +115,15 @@ font-size: 15px;
 }
 .like-dislike{
   margin: 0;
+}
+.NotFound{
+  height: 560px;
+  width: 1200px;
+}
+nav{
+ font-size: 28px;
+ display: flex;
+ gap: 25px;
+ margin: 20px;
+ 
 }

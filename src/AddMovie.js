@@ -7,6 +7,7 @@ export function AddMovie({ Movies, setMovies }) {
   const [rating, setRating] = useState("");
   const [summary, setSummary] = useState("");
   const [poster, setPoster] = useState("");
+  const [trailer, setTrailer] = useState("");
 
 
 
@@ -18,6 +19,7 @@ export function AddMovie({ Movies, setMovies }) {
       rating: parseInt(rating),
       summary,
       poster,
+      trailer
     };
     console.log(newMovie);
     setMovies([...Movies, newMovie]);
@@ -29,28 +31,36 @@ export function AddMovie({ Movies, setMovies }) {
       <TextField
         value={name}
         onChange={(event) => setName(event.target.value)}
-        placeholder='Enter the name'
+        label='Enter the name'
         id="standard-basic"
         variant="standard" />
 
       <TextField
+        className='add-movie-input'
         value={rating}
         onChange={(event) => setRating(event.target.value)}
-        placeholder='Enter the rating'
+        label='Enter the rating'
         id="standard-basic"
         variant="standard" />
 
       <TextField
         value={summary}
         onChange={(event) => setSummary(event.target.value)}
-        placeholder='Enter the summary'
+        label='Enter the summary'
         id="standard-basic"
         variant="standard" />
 
       <TextField
         value={poster}
         onChange={(event) => setPoster(event.target.value)}
-        placeholder='Enter the poster'
+        label='Enter the poster'
+        id="standard-basic"
+        variant="standard" />
+
+<TextField
+        value={trailer}
+        onChange={(event) => setTrailer(event.target.value)}
+        label='Enter the trailer'
         id="standard-basic"
         variant="standard" />
 
