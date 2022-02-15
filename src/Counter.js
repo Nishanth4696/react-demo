@@ -8,7 +8,7 @@ export default function Counter(){
     const [dislike,setDislike] = useState(0);
     return(
       <div className='counter-container'>
-        <IconButton className='like' onClick={() =>{setLike(like + 1)}} aria-label="like" color="primary"> 
+        <IconButton className='likes-dislikes' onClick={() =>{setLike(like + 1)}} aria-label="like" color="primary"> 
         <Badge badgeContent={like} color="primary">
          👍
         </Badge>
@@ -16,13 +16,12 @@ export default function Counter(){
 
         
 
-        <IconButton className='dislike' onClick={() =>{setDislike(dislike + 1)}} aria-label="dislike" color="error"> 
+        <IconButton className='likes-dislikes' onClick={() =>{setDislike(dislike + 1)}} aria-label="dislike" color="error"> 
         <Badge badgeContent={dislike} color="error">
         👎
         </Badge>
         </IconButton>
-        
-        
+              
         
       </div>
       

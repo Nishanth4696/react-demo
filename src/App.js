@@ -80,10 +80,6 @@ export default function App() {
         <Link to="/colorgame">Color Game</Link>
       </nav>
       <Switch>
-        <Route path="/home">
-            <Welcome />
-        </Route>
-
         <Route path="/films">
           <Redirect to='/movies' />
         </Route>
@@ -93,7 +89,7 @@ export default function App() {
         </Route>
 
         <Route path="/movies">
-          <MovieList Movies={movies}/> 
+          <MovieList Movies={movies} setMovies={setMovies}/> 
         </Route>
 
         <Route path="/addmovies">
@@ -102,6 +98,10 @@ export default function App() {
 
         <Route path="/colorgame">
           <ColorBox />
+        </Route>
+
+        <Route path="/">
+            <Welcome />
         </Route>
 
         <Route path="**">

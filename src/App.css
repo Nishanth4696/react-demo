@@ -72,17 +72,16 @@
 }
 
 .counter-container{
-  display: flex;
+  display: inline-flex;
   gap: 15px;
   margin: 10px;
   padding: 20px;
+  padding-left: 0%;
+  margin-left: 0%;
+
 }
 
-.like:hover{
-  background-color: brown;
-}
-
-.dislike:hover{
+.likes-dislikes:hover{
   background-color: brown;
 }
 
