@@ -16,7 +16,7 @@
 .movie-container{
   background-color: white;
   min-width: 320px;
-  width: 320px;
+  width: 350px;
   border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
@@ -35,9 +35,11 @@
 .add-movie-input{
   margin: 20px;
 }
+
+
 .movie-poster{
   height: 300px;
-  width: 320px;
+  width: 350px;
   object-fit: cover;
 }
 

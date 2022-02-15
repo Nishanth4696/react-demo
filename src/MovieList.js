@@ -2,9 +2,11 @@ import  Movie  from './Movie.js';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit'
+import { useHistory } from 'react-router-dom';
 
 
 export default function MovieList({Movies, setMovies}){
+  const history = useHistory();
     return(
       <section className="movieList">
          {Movies.map(({name,rating,summary, poster, trailer}, index) => 
@@ -31,12 +33,13 @@ export default function MovieList({Movies, setMovies}){
             }
             editButton={
               <IconButton 
-                onClick={() =>{
-                 console.log("editing ...",index)
+                onClick={() =>{ history.push("/movies/edit/" + index)
+                 
                 }} 
+                style={{ marginLeft:"auto" }}
                 className="movie-show-button"
                   aria-label="delete" 
-                  color="error">
+                  color="primary">
                     <EditIcon />
                 </IconButton>
             }

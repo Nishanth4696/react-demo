@@ -7,6 +7,7 @@ import { AddMovie } from './AddMovie';
 import {NotFound} from './NotFound'
 import { Switch, Route, Link, Redirect } from "react-router-dom";
 import { MovieDetails } from './MovieDetails';
+import { EditMovie } from './EditMovie';
 
 
 export default function App() {
@@ -74,7 +75,7 @@ export default function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/home"> Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/movies">Movies</Link>
         <Link to="/addmovies">Add Movies</Link>
         <Link to="/colorgame">Color Game</Link>
@@ -84,9 +85,15 @@ export default function App() {
           <Redirect to='/movies' />
         </Route>
 
+        <Route path="/movies/edit/:id">
+          <EditMovie Movies={movies} setMovies={setMovies}/>
+        </Route>
+
         <Route path="/movies/:id">
           <MovieDetails Movies={movies}/>
         </Route>
+
+       
 
         <Route path="/movies">
           <MovieList Movies={movies} setMovies={setMovies}/> 
@@ -111,5 +118,8 @@ export default function App() {
     </div>
   );
 }
+
+
+
 
 
