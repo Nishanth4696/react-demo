@@ -75,10 +75,10 @@ export default function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/home">Home</Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/addmovies">Add Movies</Link>
-        <Link to="/colorgame">Color Game</Link>
+        <Link to="/home" style={{textDecoration:"none"}}>Home</Link>
+        <Link to="/movies" style={{textDecoration:"none"}}>Movies</Link>
+        <Link to="/addmovies" style={{textDecoration:"none"}}>Add Movies</Link>
+        <Link to="/colorgame" style={{textDecoration:"none"}}>Color Game</Link>
       </nav>
       <Switch>
         <Route path="/films">
