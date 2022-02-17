@@ -7,6 +7,8 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import InfoIcon from '@mui/icons-material/Info';
 import { useHistory } from "react-router-dom";
+import Card from '@mui/material/Card';
+
 
 
 
@@ -18,7 +20,9 @@ const history = useHistory();
 const summarystyles = { display :show ? 'block' : 'none'} 
     return (
       
-      <div className="movie-container">
+      <Card className="movie-container">
+        
+          
         <img 
           src={poster} 
           alt={name} 
@@ -56,8 +60,8 @@ const summarystyles = { display :show ? 'block' : 'none'}
         {show ? <p   style={summarystyles} className="movie-summary">{summary}</p> : ""}
         <Counter /> {editButton} {deleteButton}
         
-  
-      </div>
+        
+      </Card>
       
     );
   }

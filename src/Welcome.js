@@ -1,6 +1,6 @@
  export function Welcome(){
     return(
-        <div>
+        <div className="welcome">
             <h2>Welcome😉</h2>
         </div>
     );
