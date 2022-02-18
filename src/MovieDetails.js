@@ -1,11 +1,21 @@
 import { useHistory, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
- export function MovieDetails({ Movies }) {
+ export function MovieDetails() {
   const { id  } = useParams();
   const history = useHistory();
-  const movie = Movies[id];
+  const [movie, setMovie] = useState({});
+
+  useEffect(() => {
+    fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${id}`,{method:"GET"})
+    .then((data) => data.json())
+    .then((mv) => setMovie(mv))
+  },[])
+ 
+
+  // const movie = Movies[id];
   const styles = movie.rating > 8 ? {color : 'teal', fontWeight: 'bold'} : {color : 'crimson', fontWeight: 'bold'};
   return (
     <div className="movie-detail-container">
