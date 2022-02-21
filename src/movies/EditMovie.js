@@ -1,20 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useHistory, useParams } from 'react-router-dom';
 
-export function EditMovie({ Movies, setMovies }) {
+export function EditMovie() {
     const { id } = useParams();
-    const history = useHistory();
-    const movie = Movies[id];
+    
+    const [movie, setMovie] = useState(null);
+
+    useEffect(() => {
+      fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${id}`,{method:"GET"})
+      .then((data) => data.json())
+      .then((mv) => setMovie(mv))
+      
+    },[id])
+   
+ return movie ? <UpdateMovie movie={movie}  /> : ""; 
+ 
+}
+
+function UpdateMovie({movie}){
+  
+
   const [name, setName] = useState(movie.name);
   const [rating, setRating] = useState(movie.rating);
   const [summary, setSummary] = useState(movie.summary);
   const [poster, setPoster] = useState(movie.poster);
   const [trailer, setTrailer] = useState(movie.trailer);
-
-
-
+  
+  const history = useHistory();
   const editMovie = () => {
 
     console.log("Edited...");
@@ -26,11 +40,18 @@ export function EditMovie({ Movies, setMovies }) {
       trailer
     };
     
-    const copy_movielist = [ ...Movies ];
-    copy_movielist[id] = updateMovie
-    setMovies(copy_movielist)
-    history.push("/movies")
+    fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${movie.id}`,
+    {
+      method:"PUT",
+      body:JSON.stringify(updateMovie),
+      headers:{'Content-Type':'application/json'
+    },
+    }).then(() => history.push("/movies"))
+    
+
+  
   };
+
   return (
 
     <div className='add-movie-form'>

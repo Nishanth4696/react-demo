@@ -26,7 +26,7 @@ export default function MovieList(){
  
     return(
       <section className="movieList">
-         {Movies.map(({name,rating,summary, poster, trailer, id},index) => 
+         {Movies.map(({name,rating,summary, poster, trailer, id}) => 
           <Movie 
             name={name} 
             rating={rating} 
@@ -45,7 +45,7 @@ export default function MovieList(){
             }
             editButton={
               <IconButton 
-                onClick={() =>{ history.push("/movies/edit/" + index)
+                onClick={() =>{ history.push("/movies/edit/" + id)
                  
                 }} 
                 style={{ marginLeft:"auto" }}
@@ -61,6 +61,3 @@ export default function MovieList(){
     );
   }
   
-  // fetch("https://620f1911ec8b2ee283336fc9.mockapi.io/movies/" + id,{method:"DELETE"})
-  //   .then((data) => data.json())
-  //   .then((mvs) => setMovies(mvs))

@@ -1,14 +1,14 @@
 import './App.css';
 import { useState} from 'react';
-import { ColorBox } from './ColorBox';
-import MovieList from './MovieList';
+import { ColorBox } from './colors/ColorBox';
+import MovieList from './movies/MovieList';
 import { Welcome } from './Welcome';
-import { AddMovie } from './AddMovie';
+import { AddMovie } from './movies/AddMovie';
 import {NotFound} from './NotFound'
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
-import { MovieDetails } from './MovieDetails';
-import { EditMovie } from './EditMovie';
-import { Mode } from './Mode';
+import { MovieDetails } from './movies/MovieDetails';
+import { EditMovie } from './movies/EditMovie';
+import { Mode } from './game/Mode';
 import AppBar from '@mui/material/AppBar';
 import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
@@ -16,13 +16,8 @@ import Toolbar from '@mui/material/Toolbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { TicTacToe } from './TicTacToe';
-
-
-
-
-
-
+import { TicTacToe } from './game/TicTacToe';
+import { BasicForm } from './BasicForm';
 
 
 export default function App() {
@@ -51,6 +46,7 @@ export default function App() {
               <Button variant="text" style={{color:"inherit"}} onClick={()=> history.push("./colorgame")}>Color Game</Button>
               <Button variant="text" style={{color:"inherit"}} onClick={()=> history.push("./mode")}>Mode</Button>
               <Button variant="text" style={{color:"inherit"}} onClick={()=> history.push("./tictactoe")}>Tic-Tac-Toe</Button>
+              <Button variant="text" style={{color:"inherit"}} onClick={()=> history.push("./basicform")}>Basic Form</Button>
               <Button 
                 startIcon ={mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon /> }
                 variant="text" 
@@ -97,6 +93,10 @@ export default function App() {
               <TicTacToe />
             </Route>
 
+            <Route path="/basicform">
+              <BasicForm/>
+            </Route>
+
             <Route path="/">
                 <Welcome />
             </Route>
@@ -110,10 +110,5 @@ export default function App() {
      </ThemeProvider> 
   );
 }
-
-
-
-
-
 
 
