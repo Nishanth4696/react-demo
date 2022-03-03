@@ -29,17 +29,17 @@ export default function MovieList(){
  
     return(
       <section className="movieList">
-         {Movies.map(({name,rating,summary, poster, trailer, id}) => 
+         {Movies.map(({name,rating,summary, poster, trailer, id, _id}) => 
           <Movie 
             name={name} 
             rating={rating} 
             summary={summary} 
             poster={poster}
             trailer={trailer}
-            id={id}
+            id={_id}
             deleteButton={
               <IconButton 
-                onClick={() =>{deleteMovie(id)}}
+                onClick={() =>{deleteMovie(_id)}}
                   className="movie-show-button"
                   aria-label="delete" 
                   color="error">
@@ -48,7 +48,7 @@ export default function MovieList(){
             }
             editButton={
               <IconButton 
-                onClick={() =>{ history.push("/movies/edit/" + id)
+                onClick={() =>{ history.push("/movies/edit/" + _id)
                  
                 }} 
                 style={{ marginLeft:"auto" }}
