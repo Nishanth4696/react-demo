@@ -6,11 +6,14 @@ import { useHistory } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
 
+const API_URL = "https://b28wd-movie.herokuapp.com"
+// const API_URL = "https://620f1911ec8b2ee283336fc9.mockapi.io"
+
 export default function MovieList(){
   const [Movies, setMovies] = useState([]);
 
   const getMovies = () =>{
-    fetch("https://620f1911ec8b2ee283336fc9.mockapi.io/movies",{method:"GET"})
+    fetch(`${API_URL}/movies`,{method:"GET"})
     .then((data) => data.json())
     .then((mvs) => setMovies(mvs))
   }
@@ -19,7 +22,7 @@ export default function MovieList(){
   const history = useHistory();
 
   const deleteMovie = (id) =>{
-    fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${id}`,{ method:"DELETE" })
+    fetch(`${API_URL}/movies/${id}`,{ method:"DELETE" })
     .then(() => getMovies());
     
   }
