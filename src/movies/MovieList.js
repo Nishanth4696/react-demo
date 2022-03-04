@@ -21,8 +21,8 @@ export default function MovieList(){
 
   const history = useHistory();
 
-  const deleteMovie = (_id) =>{
-    fetch(`${API_URL}/movies/${_id}`,{ method:"DELETE" })
+  const deleteMovie = (id) =>{
+    fetch(`${API_URL}/movies/${id}`,{ method:"DELETE" })
     .then(() => getMovies());
     
   }

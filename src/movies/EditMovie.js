@@ -69,7 +69,7 @@ function UpdateMovie({movie}){
    
     
     
-    fetch(`${API_URL}/movies/${movie.id}`,
+    fetch(`${API_URL}/movies/${movie._id}`,
     {
       method:"PUT",
       body:JSON.stringify(updateMovie),
