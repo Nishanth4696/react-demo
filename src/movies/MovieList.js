@@ -4,10 +4,10 @@ import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit'
 import { useHistory } from 'react-router-dom';
 import { useState,useEffect } from 'react';
+import { API_URL } from '../global-constants.js';
 
 
-const API_URL = "https://b28wd-movie.herokuapp.com"
-// const API_URL = "https://620f1911ec8b2ee283336fc9.mockapi.io"
+
 
 export default function MovieList(){
   const [Movies, setMovies] = useState([]);
@@ -21,8 +21,8 @@ export default function MovieList(){
 
   const history = useHistory();
 
-  const deleteMovie = (id) =>{
-    fetch(`${API_URL}/movies/${id}`,{ method:"DELETE" })
+  const deleteMovie = (_id) =>{
+    fetch(`${API_URL}/movies/${_id}`,{ method:"DELETE" })
     .then(() => getMovies());
     
   }
@@ -31,6 +31,7 @@ export default function MovieList(){
       <section className="movieList">
          {Movies.map(({name,rating,summary, poster, trailer, id, _id}) => 
           <Movie 
+            key={_id}
             name={name} 
             rating={rating} 
             summary={summary} 
@@ -39,7 +40,7 @@ export default function MovieList(){
             id={_id}
             deleteButton={
               <IconButton 
-                onClick={() =>{deleteMovie(_id)}}
+                onClick={() =>deleteMovie(_id)}
                   className="movie-show-button"
                   aria-label="delete" 
                   color="error">

@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { useHistory, useParams } from 'react-router-dom';
 import { useFormik } from "formik";
 import * as yup from 'yup';
+import { API_URL } from '../global-constants.js';
 
 const formValidationSchema= yup.object({
   name:yup
@@ -34,7 +35,7 @@ export function EditMovie() {
     const [movie, setMovie] = useState(null);
 
     useEffect(() => {
-      fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${id}`,{method:"GET"})
+      fetch(`${API_URL}/movies/${id}`,{method:"GET"})
       .then((data) => data.json())
       .then((mv) => setMovie(mv))
       
@@ -68,7 +69,7 @@ function UpdateMovie({movie}){
    
     
     
-    fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${movie.id}`,
+    fetch(`${API_URL}/movies/${movie.id}`,
     {
       method:"PUT",
       body:JSON.stringify(updateMovie),

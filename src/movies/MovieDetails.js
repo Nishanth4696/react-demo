@@ -2,6 +2,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { API_URL } from '../global-constants.js';
 
  export function MovieDetails() {
   const { id  } = useParams();
@@ -9,7 +10,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
-    fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/movies/${id}`,{method:"GET"})
+    fetch(`${API_URL}/movies/${id}`,{method:"GET"})
     .then((data) => data.json())
     .then((mv) => setMovie(mv))
   },[id])
