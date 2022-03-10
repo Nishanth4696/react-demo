@@ -49,6 +49,7 @@ export function AddMovie() {
     // setMovies([...Movies, newMovie]); 
       fetch(`${API_URL}/movies`,
       {
+        mode:"no-cors",
         method:"POST",
         body:JSON.stringify(newMovie),
         headers:{'Content-Type':'application/json'},
@@ -100,7 +101,7 @@ export function AddMovie() {
       <TextField
         id="poster"
         name="poster"
-        value={formik.values.poster}summary
+        value={formik.values.poster}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         label='Enter the poster'
