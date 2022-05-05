@@ -49,7 +49,7 @@ export function AddMovie() {
     // setMovies([...Movies, newMovie]); 
       fetch(`${API_URL}/movies`,
       {
-        mode:"no-cors",
+        mode:"no-cors",        
         method:"POST",
         body:JSON.stringify(newMovie),
         headers:{'Content-Type':'application/json'},

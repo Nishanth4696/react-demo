@@ -17,6 +17,7 @@ export default function MovieList(){
     .then((data) => data.json())
     .then((mvs) => setMovies(mvs))
   }
+ 
   useEffect(getMovies,[])
 
   const history = useHistory();

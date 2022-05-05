@@ -12,7 +12,7 @@ const formValidationSchema= yup.object({
       .required("why not fill tis field🎃"),
   rating:yup
       .number()
-      .max(10,"rating goes beyond level")
+      .max(20,"rating goes beyond level")
       .required("why not fill this field🎃"),
   summary:yup
       .string()
